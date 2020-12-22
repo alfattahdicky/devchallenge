@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700;900&family=Montserrat:wght@400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,700&display=swap");
+
+:root {
+  --primary-color: #333;
+  --secondary-color: #fff;
+  --text-color: #4f4f4f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  padding: 20px;
+  color: var(--primary-color);
+  line-height: 1.5;
+}
+
+header h1 {
+  font-family: "Inconsolata", sans-serif;
+  font-size: 1.2rem;
+}
+
+main {
+  font-family: "Space Mono", sans-serif;
+  margin-top: 10vmin;
+}
+
+main img {
+  object-fit: cover;
+  object-position: center;
+  width: 40vh;
+  margin: 0 auto;
+}
+
+main .wrapper {
+  margin-top: 20px;
+}
+
+main .wrapper h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+main .wrapper p {
+  margin: 20px 0 40px;
+  color: var(--text-color);
+}
+
+main .wrapper .btn {
+  font-family: "Space Mono", sans-serif;
+  border: none;
+  outline: none;
+  padding: 25px 35px;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+footer {
+  margin: 80px 0 10px;
+  text-align: center;
+}
+
+footer a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    min-height: 100vh;
+    padding: 20px 40px;
+  }
+  main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+  }
+  main img {
+    width: 100%;
+    grid-column: 2 / span 4;
+    align-self: center;
+  }
+  main .wrapper {
+    grid-column: 7 / span 6;
+  }
+  main .wrapper h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  main .wrapper .btn {
+    padding: 15px 25px;
+  }
+  footer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main .wrapper h1 {
+    font-size: 3rem;
+  }
+  main .wrapper p {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .wrapper h1 {
+    font-size: 4rem;
+    width: 80%;
+  }
+}
